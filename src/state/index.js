@@ -34,6 +34,7 @@ export const initializeMenu = rawMenuData => {
       const description = rawItem.itemDescription.trim();
       const name = rawItem.itemName.trim();
       const price = parseFloat(rawItem.itemPrice).toFixed(2);
+      const image = rawItem.imageUrl.trim();
 
       // If family doesn't exist
       const fam = menu.families.find(f => f.name === familyName);
@@ -48,6 +49,7 @@ export const initializeMenu = rawMenuData => {
                   name: modelName,
                   description,
                   tags,
+                  image,
                   variations: [{ name, price }]
                 }
               ]
@@ -67,6 +69,7 @@ export const initializeMenu = rawMenuData => {
               name: modelName,
               description,
               tags,
+              image,
               variations: [{ name, price }]
             }
           ]
@@ -81,6 +84,7 @@ export const initializeMenu = rawMenuData => {
           name: modelName,
           description,
           tags,
+          image,
           variations: [{ name, price }]
         });
         return menu;
