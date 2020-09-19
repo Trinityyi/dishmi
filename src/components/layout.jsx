@@ -25,7 +25,7 @@ const Layout = ({
           rel="stylesheet"
         />
       </Helmet>
-      <div className="container mx-auto max-w-3xl">
+      <div className="container mx-auto max-w-3xl py-4 min-h-screen flex flex-col justify-between">
         {children}
       </div>
     </>
