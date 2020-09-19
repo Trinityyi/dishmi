@@ -20,6 +20,7 @@ module.exports = {
       options: {
         typeName: typeNameFromDir,
         nodePerFile: `menu`,
+        delimiter: `;`
       },
     },
     {
