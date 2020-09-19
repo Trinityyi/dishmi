@@ -5,8 +5,10 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    fontFamily: {
+      'sans': ['"Alegreya Sans"', 'Helvetica', 'Arial', 'sans-serif']
+    },
   },
   variants: {},
   plugins: [],
-}
+};
