@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 const Home = () => {
   const [pin, setPin] = useState('');
   return (
-    <Layout title="">
+    <Layout title="" isIndex>
       <div>
         <img
           className="block mx-auto w-40 mt-10 mb-4"
