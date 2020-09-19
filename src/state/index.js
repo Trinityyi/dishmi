@@ -1,7 +1,11 @@
 import { createStore as reduxCreateStore } from 'redux';
 
 const initialState = {
-  user: {},
+  user: {
+    view: 'families',
+    family: null,
+    category: null
+  },
   menu: {}
 };
 

@@ -3,12 +3,17 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import CategoryView from '../components/categoryView';
+import ItemView from '../components/itemView';
 import { initializeMenu } from '../state';
 
 const RestaurantPage = ({
   data,
   initializeMenu,
-  menuData
+  menuData,
+  view,
+  family,
+  category
 }) => {
   useEffect(() => {
     initializeMenu(data.dataCsv.menu);
@@ -18,49 +23,26 @@ const RestaurantPage = ({
 
   return (
     <Layout title="">
-            {
-              name: categoryName,
-              items: [
-                {
-                  name: modelName,
-                  description,
-                  tags,
-                  variations: [{ name, price }]
-                }
-              ]
-            }
-          ]
-        });
-        return menu;
+      {
+        view === 'families' &&
+        <CategoryView
+          categories={menuData.families}
+          isFamily
+        />
       }
-
-      // If family exists, category doesn't exist
-      const cat = fam.categories.find(c => c.name === categoryName);
-      if (!cat) {
-        fam.categories.push({
-          name: categoryName,
-          items: [
-            {
-              name: modelName,
-              description,
-              tags,
-              variations: [{ name, price }]
-            }
-          ]
-        });
-        return menu;
+      {
+        view === 'categories' &&
+        <CategoryView
+          categories={family.categories}
+          title={family.name}
+        />
       }
-
-      // If family and category exits, model doesn't exist
-      const model = cat.items.find(i => i.name === modelName);
-      if (!model) {
-        cat.items.push({
-          name: modelName,
-          description,
-          tags,
-          variations: [{ name, price }]
-        });
-        return menu;
+      {
+        view === 'items' &&
+        <ItemView
+          items={category.items}
+          title={category.name}
+        />
       }
     </Layout>
   );
@@ -68,7 +50,10 @@ const RestaurantPage = ({
 
 const mapStateToProps = state => {
   return {
-    menuData: state.menu
+    menuData: state.menu,
+    view: state.user.view,
+    family: state.user.family,
+    category: state.user.category,
   };
 };
 
