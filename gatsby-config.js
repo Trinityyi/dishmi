@@ -1,3 +1,5 @@
+const { typeNameFromDir } = require("gatsby-transformer-csv")
+
 module.exports = {
   siteMetadata: {
     title: `dishmi`,
@@ -6,6 +8,20 @@ module.exports = {
     siteUrl: `https://dishmi.netlify.app`
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-csv`,
+      options: {
+        typeName: typeNameFromDir,
+        nodePerFile: `menu`,
+      },
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
