@@ -16,8 +16,48 @@ const reducer = (state, action) => {
       ...state,
       menu: action.menu
     };
+  case 'CHANGE_VIEW':
+    return {
+      ...state,
+      user: {
+        ...state.user,
+        ...action.data
+      }
+    };
   default:
     return state;
+  }
+};
+
+export const changeView = (view, selection) => {
+  switch (view) {
+  case 'families':
+    return {
+      type: 'CHANGE_VIEW',
+      data: {
+        view,
+        family: null,
+        category: null
+      }
+    };
+  case 'categories':
+    return {
+      type: 'CHANGE_VIEW',
+      data: {
+        view,
+        family: selection
+      }
+    };
+  case 'items':
+    return {
+      type: 'CHANGE_VIEW',
+      data: {
+        view,
+        category: selection
+      }
+    };
+  default:
+    break;
   }
 };
 
