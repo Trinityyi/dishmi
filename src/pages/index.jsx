@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/layout';
 
-export default function Home() {
+const Home = () => {
+  const [pin, setPin] = useState('');
   return (
     <Layout title="">
       <div>
@@ -20,15 +21,20 @@ export default function Home() {
             type="text"
             placeholder="PIN"
             aria-label="PIN"
+            onChange={e => {
+              setPin(e.target.value);
+            }}
           />
-          <button
+          <a
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-40 block py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline"
-            type="button"
+            href={`/${pin}`}
           >
             View
-          </button>
+          </a>
         </form>
       </div>
     </Layout>
   );
-}
+};
+
+export default Home;
