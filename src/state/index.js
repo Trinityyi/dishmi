@@ -4,7 +4,8 @@ const initialState = {
   user: {
     view: 'families',
     family: null,
-    category: null
+    category: null,
+    item: null
   },
   menu: {}
 };
@@ -54,6 +55,14 @@ export const changeView = (view, selection) => {
       data: {
         view,
         category: selection
+      }
+    };
+  case 'add':
+    return {
+      type: 'CHANGE_VIEW',
+      data: {
+        view,
+        item: selection
       }
     };
   default:
