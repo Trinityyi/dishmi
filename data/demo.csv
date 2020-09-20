@@ -1,11 +1,30 @@
 itemName;itemDescription;itemPrice;categoryName;modelName;imageUrl;tagList
-200 gr;This is so juicy! Oh my God!;7.50;Burgers;Juicy Burger;;Juicy
+Mixed green salad;Your run of the mill, mixed greens. For health nuts, by health nuts, includes nuts.;4.00;Salads;;https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80;Vegan,Fresh
+Quinoa;Seeds, some oil drizzled, you get the picture. Healthier than other things.;7.00;Salads;;https://images.unsplash.com/photo-1562923690-e274ba919781?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=711&q=80;Vegan,Fresh
+Caesar's;Because the Romans knew what they were doing!;7.50;Salads;;https://images.unsplash.com/photo-1574926054530-540288c8e678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80;Fresh
+French Fry Extravaganza;Clog your arteries like never before!;4.15;Appetizers;;https://images.unsplash.com/photo-1484009902830-a314db11070c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80;Vegan
+5 sticks;Sticks made of the premiumest of cheeses (hand not included).;3.20;Appetizers;Cheese sticks;https://images.unsplash.com/photo-1548340748-6d2b7d7da280?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80;Cheesy
+10 sticks;Sticks made of the premiumest of cheeses (hand not included).;5.60;Appetizers;Cheese sticks;https://images.unsplash.com/photo-1548340748-6d2b7d7da280?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80;Cheesy
+25 sticks;Sticks made of the premiumest of cheeses (hand not included).;11.10;Appetizers;Cheese sticks;https://images.unsplash.com/photo-1548340748-6d2b7d7da280?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80;Cheesy
+Mini burgers;Taste the future. Molecular gastronomy at its finest (not).;8.40;Appetizers;;https://images.unsplash.com/photo-1585730315692-5252e57d4b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80;
+Chicken wings;They couldn't fly, but they could fry!;4.80;Appetizers;;https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1335&q=80;Healthy
+Cheesy Cheese;The cheese just melts your mouth;5.90;Burgers;;https://images.unsplash.com/photo-1498579485796-98be3abc076e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80;Cheesy
+200 gr;This is so juicy! Oh my God!;7.50;Burgers;Juicy Burger;https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1303&q=80;Juicy
 400 gr;This is so juicy! Oh my God!;10.50;Burgers;Juicy Burger;;Juicy
 800 gr;This is so juicy! Oh my God!;14.50;Burgers;Juicy Burger;;Juicy
 Spicy Mexican;So hot you will die!;8.00;Burgers;;https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80;Hot
-Veganito;No meat, just veggies.;5.80;Burgers;;;Vegan
+New Girl;Femininity at its best.;3.90;Burgers;;https://images.unsplash.com/photo-1534193561958-40bfcd20ee4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80;New,Vegan,Healthy
+Veganito;No meat, just veggies.;5.80;Burgers;;https://images.unsplash.com/photo-1585991519035-72443f3920ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80;Vegan
+Magic Mushroom;Grow strong like Mario!;8.10;Burgers;;https://images.unsplash.com/photo-1551987840-f62d9c74ae78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80;
 330ml;Good year, good beer;3.30;Beer;Beeritsa (Draught);;Draught
 500ml;Good year, good beer;4.50;Beer;Beeritsa (Draught);;Draught
 1l;Good year, good beer;6.00;Beer;Beeritsa (Draught);;Draught
+Hourglass (400ml);If you drink enough of this, they say you'll look like an hourglass.;4.00;Beer;;;New
+Red Zebra 355ml;Fruity, watermelon taste. First date stuff.;4.00;Beer;;;Fruity
+Zombie;Rum, apricot brandy, lime juice, cinnamon syrup, exotic fruits & angostyra aromatic bitters.;7.00;Cocktails;;https://images.unsplash.com/photo-1562707904-8280ad4e2bb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80;
+Mojito;Rum, lime juice,club soda, mint leaves.;7.00;Cocktails;;https://images.unsplash.com/photo-1563940476958-509a0a881c0c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80;
 Glass (250ml);The bestest of wines;4.00;Wine;White wine;;
 Bottle (750ml);The bestest of wines;9.00;Wine;White wine;;
+Underhex Winery Survivor 750ml;You put me under your spell.;9.00;Wine;;;
+Cheesecake Merenda;Guiltless pleasure, except the Merenda. But what's the harm?;6.50;Dessert;;https://images.unsplash.com/photo-1585996399037-bf5746e1a485?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80;Choco
+My Donut Madness;As if the burgers weren't enough. There, clog them arteries.;9.50;Dessert;;https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80;

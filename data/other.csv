@@ -1,11 +1,21 @@
 itemName;itemDescription;itemPrice;categoryName;modelName;imageUrl;tagList
-250 gr;This is so Black Angus! Oh my God!;7.50;Burgers;Black Angus Burger;;Angus
-500 gr;This is so Black Angus! Oh my God!;10.50;Burgers;Black Angus Burger;;Angus
-850 gr;This is so Black Angus! Oh my God!;14.50;Burgers;Black Angus Burger;;Angus
-Hot Potato;So hot you will think it's spicy!;8.00;Burgers;;;Spicy,Vegan
-New Girl;Femininity at its best.;3.90;Burgers;;;New,Vegan,Healthy
+Delicate Italian Dough;Classic 3-color pizza (tomatoes, mozzarella, basil). More like an appetizer.;7.50;Pizza;Margherita;https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80;
+Dough Dough;Classic 3-color pizza (tomatoes, mozzarella, basil). More like an appetizer.;8.50;Pizza;Margherita;https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80;
+Delicate Italian Dough;Fancy pepperoni-like pizza. Impress the girlfriend on a full stomach.;13.50;Pizza;Prosciutto Crudo;https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80;
+Dough Dough;Fancy pepperoni-like pizza. Impress the girlfriend on a full stomach.;15.50;Pizza;Prosciutto Crudo;https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80;
+Normale (8 Pieces);Probably means spicy in Italian. Spicy salami & hot pepper by the way, just so you know.;9.90;Pizza;Mangiafuoco;https://images.unsplash.com/photo-1571407921708-4202261ea9e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=730&q=80;
+Grande (12 Pieces);Probably means spicy in Italian. Spicy salami & hot pepper by the way, just so you know.;14.90;Pizza;Mangiafuoco;https://images.unsplash.com/photo-1571407921708-4202261ea9e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=730&q=80;
+Normal Dough;You know it's true. But you can start an argument, if you like.;14.90;Pizza;Pigs Are Prosciutto;https://images.unsplash.com/photo-1564128442383-9201fcc740eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1402&q=80;
+Whole-grain Dough;You know it's true. But you can start an argument, if you like.;15.90;Pizza;Pigs Are Prosciutto;https://images.unsplash.com/photo-1564128442383-9201fcc740eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1402&q=80;
+Normale (8 Pieces);It translates to four cheese(s). It also smells like feet.;10.90;Pizza;Quattro Formaggi;https://images.unsplash.com/photo-1544882907-b914cebddbf4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80;
+Grande (12 Pieces);It translates to four cheese(s). It also smells like feet;14.90;Pizza;Quattro Formaggi;https://images.unsplash.com/photo-1544882907-b914cebddbf4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80;
+Pineapple;Is it a real pizza? I don't think so...;14.90;Pizza;;https://images.unsplash.com/photo-1469647306420-8af65f90d810?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80;
 330ml;Good year, good beer;3.30;Beer;Beeritsa (Draught);;Draught
 500ml;Good year, good beer;4.50;Beer;Beeritsa (Draught);;Draught
 1l;Good year, good beer;6.00;Beer;Beeritsa (Draught);;Draught
-Glass (250ml);The bestest of wines;4.00;Wine;Red wine;;
-Pitcher (750ml);The bestest of wines;9.00;Wine;Red wine;;
+Lemonade Pils (Bottle, 310ml);Looks like a lemonade but it's a pilsner. Trick your kids!;4.00;Beer;;;
+Glass (250ml);The bestest of wines;4.00;Wine;;;
+Pitcher (750ml);The bestest of wines;9.00;Wine;;;
+Coke (250ml);The classic (pocket not included).;2.20;Soft drinks;;https://images.unsplash.com/photo-1502083339-0c0b5c2c0f62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80;
+Coke zero (250ml);The classic, but healthier (probably).;2.20;Soft drinks;;https://images.unsplash.com/photo-1561758033-48d52648ae8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80;
+Fake beer (250ml);Looks the part, but isn't. Trick your kids!;2.80;Soft drinks;;https://images.unsplash.com/photo-1535324762078-9c5529d8d32d?ixlib=rb-1.2.1&auto=format&fit=crop&w=624&q=80;
