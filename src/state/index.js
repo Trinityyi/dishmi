@@ -5,7 +5,9 @@ const initialState = {
     view: 'families',
     family: null,
     category: null,
-    item: null
+    item: null,
+    lastView: null,
+    cart: []
   },
   menu: {}
 };
@@ -25,9 +27,59 @@ const reducer = (state, action) => {
         ...action.data
       }
     };
+  case 'BACK_TO_VIEW':
+    return {
+      ...state,
+      user: {
+        ...state.user,
+        view: action.view,
+        lastView: null
+      }
+    };
+  case 'ADD_ITEM':
+    return {
+      ...state,
+      user: {
+        ...state.user,
+        cart: [
+          ...state.user.cart,
+          action.item
+        ]
+      }
+    };
+  case 'REMOVE_ITEM':
+    return {
+      ...state,
+      user: {
+        ...state.user,
+        cart: state.user.cart.filter((i, p) => p !== action.index)
+      }
+    };
+
   default:
     return state;
   }
+};
+
+export const addItem = item => {
+  return {
+    type: 'ADD_ITEM',
+    item
+  };
+};
+
+export const removeItem = index => {
+  return {
+    type: 'REMOVE_ITEM',
+    index
+  };
+};
+
+export const backToView = view => {
+  return {
+    type: 'BACK_TO_VIEW',
+    view
+  };
 };
 
 export const changeView = (view, selection) => {
@@ -63,6 +115,22 @@ export const changeView = (view, selection) => {
       data: {
         view,
         item: selection
+      }
+    };
+  case 'cart':
+    return {
+      type: 'CHANGE_VIEW',
+      data: {
+        view,
+        lastView: selection
+      }
+    };
+  case 'search':
+    return {
+      type: 'CHANGE_VIEW',
+      data: {
+        view,
+        lastView: selection
       }
     };
   default:
