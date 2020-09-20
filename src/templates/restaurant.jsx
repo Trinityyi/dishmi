@@ -12,6 +12,9 @@ import { initializeMenu, changeView } from '../state';
 
 const RestaurantPage = ({
   data,
+  pageContext: {
+    metadata
+  },
   initializeMenu,
   changeView,
   menuData,
@@ -19,8 +22,8 @@ const RestaurantPage = ({
   category
 }) => {
   useEffect(() => {
-    initializeMenu(data.dataCsv.menu);
-  }, [data, initializeMenu]);
+    initializeMenu(data.dataCsv.menu, metadata);
+  }, [data, initializeMenu, metadata]);
 
   useEffect(() => {
     if (!view) changeView('categories');
@@ -29,7 +32,7 @@ const RestaurantPage = ({
   if (!menuData || !menuData.categories || !menuData.categories.length) return null;
 
   return (
-    <Layout title="">
+    <Layout title={metadata.restaurantName}>
       {
         view === 'categories' &&
         <CategoryView

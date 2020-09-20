@@ -1,4 +1,5 @@
 const path = require(`path`);
+const fs = require(`fs`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -29,12 +30,17 @@ exports.createPages = async({ graphql, actions }) => {
     }
   `);
   result.data.allDataCsv.edges.forEach(({ node }) => {
+    const fileName = node.fields.slug.slice(1, -1);
+    const metadata = JSON.parse(
+      fs.readFileSync(`./metadata/${fileName}.json`, 'utf-8')
+    );
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/restaurant.jsx`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
+        metadata,
         slug: node.fields.slug
       }
     });

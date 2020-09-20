@@ -10,7 +10,8 @@ const initialState = {
     searchQuery: '',
     fromSearch: false
   },
-  menu: {}
+  menu: {},
+  menuMetadata: {}
 };
 
 const reducer = (state, action) => {
@@ -18,7 +19,8 @@ const reducer = (state, action) => {
   case 'INIT_MENU':
     return {
       ...state,
-      menu: action.menu
+      menu: action.menu,
+      menuMetadata: action.metadata
     };
   case 'CHANGE_VIEW':
     return {
@@ -164,7 +166,7 @@ export const changeView = (view, selection) => {
   }
 };
 
-export const initializeMenu = rawMenuData => {
+export const initializeMenu = (rawMenuData, metadata) => {
   const menuData = rawMenuData
     .reduce((menu, rawItem) => {
       // Parse data
@@ -216,7 +218,8 @@ export const initializeMenu = rawMenuData => {
 
   return {
     type: 'INIT_MENU',
-    menu: menuData
+    menu: menuData,
+    metadata
   };
 };
 

@@ -37,7 +37,7 @@ const AddView = ({
             </div>
           }
           <h1 className="text-3xl text-center">{selectedItem.name}</h1>
-          <p className="text-md pt-2 pb-4 text-gray-800">{selectedItem.description}</p>
+          <p className="text-md pt-2 px-4 pb-4 text-gray-800">{selectedItem.description}</p>
           {
             withVariations ? (
               <div className="flex flex-col divide-y-2 divide-gray-300 divide-double w-full">

@@ -1,0 +1,10 @@
+{
+  "restaurantName": "My restaurant",
+  "restaurantLogo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80",
+  "restaurantDescription": "This is a story about a humble restaurant. Everybody wanted burgers, so we made burgers. Then they wanted beer, so we served beer. Now we are a cool restaurant somewhere with food and beer and music and dance, dance, dance with your bellies full of mead and meat.",
+  "restaurantFooter": "Cool restaurant located at a place far far away. Owned by: Chew Bacca",
+  "instagramLink": "https://instagram.com/my-restaurant",
+  "facebookLink": "https://facebook.com/my-restaurant",
+  "twitterLink": "https://twitter.com/my-restaurant",
+  "websiteLink": "https://my-restaurant.com"
+}
