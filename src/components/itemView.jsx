@@ -27,7 +27,10 @@ const ItemView = ({
               return (
                 <div
                   key={i.name}
-                  className="min-h-16 w-full p-4 grid grid-cols-4"
+                  className="min-h-16 w-full p-4 grid grid-cols-4 hover:bg-gray-200 cursor-pointer"
+                  onClick={e => {
+                    changeView('add', i);
+                  }}
                 >
                   <div
                     className={ withVariations

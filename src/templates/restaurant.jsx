@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import CategoryView from '../components/categoryView';
 import ItemView from '../components/itemView';
+import AddView from '../components/addView';
 import { initializeMenu } from '../state';
 
 const RestaurantPage = ({
@@ -43,6 +44,10 @@ const RestaurantPage = ({
           items={category.items}
           title={category.name}
         />
+      }
+      {
+        view === 'add' &&
+        <AddView />
       }
     </Layout>
   );
