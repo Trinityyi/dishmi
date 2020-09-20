@@ -7,6 +7,7 @@ import CategoryView from '../components/categoryView';
 import ItemView from '../components/itemView';
 import AddView from '../components/addView';
 import CartView from '../components/cartView';
+import SearchView from '../components/searchView';
 import { initializeMenu } from '../state';
 
 const RestaurantPage = ({
@@ -53,6 +54,10 @@ const RestaurantPage = ({
       {
         view === 'cart' &&
         <CartView />
+      }
+      {
+        view === 'search' &&
+        <SearchView />
       }
     </Layout>
   );
