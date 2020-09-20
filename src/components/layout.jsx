@@ -34,12 +34,12 @@ const Layout = ({
         <div className="fixed bottom-0 left-0 right-0 h-16 border-t-2 border-gray-200 bg-white grid grid-cols-12">
           <button className="col-start-1 col-end-3 flex items-center justify-center">
             <img src="/shopping-bag.svg" alt="" className="px-4" />
-            Cart
+            <span className="hidden sm:inline">Cart</span>
           </button>
           <button className="col-start-3 col-end-11 text-2xl">0.00 €</button>
           <button className="col-start-11 col-end-13 flex items-center justify-center">
             <img src="/search.svg" alt="" className="px-4" />
-            Search
+            <span className="hidden sm:inline">Search</span>
           </button>
         </div>
       }
