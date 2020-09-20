@@ -12,7 +12,7 @@ const ItemView = ({
   return (
     <>
       <div>
-        <button onClick={e => {
+        <button className="mx-4 my-2" onClick={e => {
           changeView('categories', selectedFamily);
         }}>
           <img src="/arrow-left.svg" alt="Back"/>
@@ -33,9 +33,9 @@ const ItemView = ({
                   }}
                 >
                   <div
-                    className={ withVariations
-                      ? 'col-start-1 col-end-5'
-                      : 'col-start-1 col-end-4'
+                    className={ Boolean(i.image)
+                      ? 'col-start-1 col-end-4'
+                      : 'col-start-1 col-end-5'
                     }
                   >
                     <h2 className="text-xl self-center block w-full mb-1">
@@ -43,7 +43,7 @@ const ItemView = ({
                       {
                         Boolean(i.tags.length) &&
                         i.tags.map(tag => (
-                          <span className="bg-gray-200 text-base px-2 py-1 mx-2 rounded-lg">{tag}</span>
+                          <span key={tag} className="bg-gray-200 text-base px-2 py-1 mx-2 rounded-lg">{tag}</span>
                         ))
                       }
                     </h2>

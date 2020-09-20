@@ -20,7 +20,7 @@ const CategoryView = ({
             </div>
           ) : (
             <>
-              <button onClick={e => {
+              <button className="mx-4 my-2" onClick={e => {
                 changeView('families');
               }}>
                 <img src="/arrow-left.svg" alt="Back"/>
@@ -61,7 +61,7 @@ const CategoryView = ({
 
 const mapStateToProps = state => {
   return {
-
+    // TODO: Clean me if you have to
   };
 };
 

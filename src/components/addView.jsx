@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { changeView } from '../state';
+import { changeView, addItem } from '../state';
 
 const AddView = ({
-  items,
-  title = '',
   changeView,
   selectedCategory,
-  selectedItem
+  selectedItem,
+  addItem
 }) => {
   const withVariations = selectedItem.variations.length > 1;
   const [selectedVariation, setSelectedVariation] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const notesInput = useRef(null);
+
   return (
     <>
       <div>
-        <button onClick={e => {
+        <button className="mx-4 my-2" onClick={e => {
           changeView('items', selectedCategory);
         }}>
           <img src="/arrow-left.svg" alt="Back"/>
@@ -39,6 +40,7 @@ const AddView = ({
                 {
                   selectedItem.variations.map((v, i) => (
                     <button
+                      key={v.name}
                       className="min-h-16 w-full p-4 grid grid-cols-8 hover:bg-gray-200 cursor-pointer"
                       onClick={() => {
                         setSelectedVariation(i);
@@ -89,9 +91,26 @@ const AddView = ({
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline col-start-2 col-end-5 mt-2"
               aria-label="Notes"
               placeholder="Notes..."
+              ref={notesInput}
             />
             <button
               className="col-start-2 col-end-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
+              onClick={e => {
+                e.preventDefault();
+                const notes = notesInput.current && notesInput.current.value.trim().length > 0
+                  ? notesInput.current.value.trim()
+                  : null;
+                const variationDescription = selectedItem.variations.length > 1
+                  ? ` (${selectedItem.variations[selectedVariation].name})`
+                  : '';
+                addItem({
+                  name: `${selectedItem.name}${variationDescription}`,
+                  quantity,
+                  notes,
+                  price: selectedItem.variations[selectedVariation].price
+                });
+                changeView('items', selectedCategory);
+              }}
             >
               Add to order
             </button>
@@ -111,7 +130,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    changeView: bindActionCreators(changeView, dispatch)
+    changeView: bindActionCreators(changeView, dispatch),
+    addItem: bindActionCreators(addItem, dispatch)
   };
 };
 
