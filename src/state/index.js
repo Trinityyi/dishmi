@@ -7,7 +7,9 @@ const initialState = {
     category: null,
     item: null,
     lastView: null,
-    cart: []
+    cart: [],
+    searchQuery: '',
+    fromSearch: false
   },
   menu: {}
 };
@@ -33,7 +35,7 @@ const reducer = (state, action) => {
       user: {
         ...state.user,
         view: action.view,
-        lastView: null
+        lastView: action.lastView
       }
     };
   case 'ADD_ITEM':
@@ -55,10 +57,32 @@ const reducer = (state, action) => {
         cart: state.user.cart.filter((i, p) => p !== action.index)
       }
     };
-
+  case 'STORE_SEARCH_QUERY':
+    return {
+      ...state,
+      user: {
+        ...state.user,
+        searchQuery: action.query
+      }
+    };
+  case 'SET_FROM_SEARCH':
+    return {
+      ...state,
+      user: {
+        ...state.user,
+        fromSearch: action.fromSearch
+      }
+    };
   default:
     return state;
   }
+};
+
+export const setSearchQuery = query => {
+  return {
+    type: 'STORE_SEARCH_QUERY',
+    query
+  };
 };
 
 export const addItem = item => {
@@ -75,10 +99,18 @@ export const removeItem = index => {
   };
 };
 
-export const backToView = view => {
+export const backToView = (view, lastView) => {
   return {
     type: 'BACK_TO_VIEW',
-    view
+    view,
+    lastView: view === 'search' ? lastView : null
+  };
+};
+
+export const comingFromSearch = fromSearch => {
+  return {
+    type: 'SET_FROM_SEARCH',
+    fromSearch
   };
 };
 
@@ -122,7 +154,9 @@ export const changeView = (view, selection) => {
       type: 'CHANGE_VIEW',
       data: {
         view,
-        lastView: selection
+        ...(selection !== 'cart' && selection !== 'search'
+          ? { lastView: selection }
+          : {})
       }
     };
   case 'search':
@@ -130,7 +164,9 @@ export const changeView = (view, selection) => {
       type: 'CHANGE_VIEW',
       data: {
         view,
-        lastView: selection
+        ...(selection !== 'cart' && selection !== 'search'
+          ? { lastView: selection }
+          : {})
       }
     };
   default:
