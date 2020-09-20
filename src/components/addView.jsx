@@ -1,12 +1,15 @@
 import React, { useState, useRef } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { changeView, addItem } from '../state';
+import { changeView, backToView, addItem } from '../state';
 
 const AddView = ({
   changeView,
+  backToView,
+  lastView,
   selectedCategory,
   selectedItem,
+  fromSearch,
   addItem
 }) => {
   const withVariations = selectedItem.variations.length > 1;
@@ -18,7 +21,8 @@ const AddView = ({
     <>
       <div>
         <button className="mx-4 my-2" onClick={e => {
-          changeView('items', selectedCategory);
+          if (fromSearch) backToView('search', lastView);
+          else changeView('items', selectedCategory);
         }}>
           <img src="/arrow-left.svg" alt="Back"/>
         </button>
@@ -109,7 +113,8 @@ const AddView = ({
                   notes,
                   price: selectedItem.variations[selectedVariation].price
                 });
-                changeView('items', selectedCategory);
+                if (fromSearch) backToView('search', lastView);
+                else changeView('items', selectedCategory);
               }}
             >
               Add to order
@@ -124,13 +129,16 @@ const AddView = ({
 const mapStateToProps = state => {
   return {
     selectedCategory: state.user.category,
-    selectedItem: state.user.item
+    selectedItem: state.user.item,
+    lastView: state.user.lastView,
+    fromSearch: state.user.fromSearch
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     changeView: bindActionCreators(changeView, dispatch),
+    backToView: bindActionCreators(backToView, dispatch),
     addItem: bindActionCreators(addItem, dispatch)
   };
 };

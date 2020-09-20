@@ -66,7 +66,14 @@ const Layout = ({
           >
             {totalPrice.toFixed(2)} €
           </button>
-          <button className="col-start-11 col-end-13 flex items-center justify-center">
+          <button
+            className="col-start-11 col-end-13 flex items-center justify-center"
+            onClick={e => {
+              e.preventDefault();
+              if (currentView === 'search') backToView(lastView);
+              else changeView('search', currentView);
+            }}
+          >
             <img src="/search.svg" alt="" className="px-4" />
             <span className="hidden sm:inline">Search</span>
           </button>

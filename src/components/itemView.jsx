@@ -1,12 +1,13 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { changeView } from '../state';
+import { changeView, comingFromSearch } from '../state';
 
 const ItemView = ({
   items,
   title = '',
   changeView,
+  comingFromSearch,
   selectedFamily
 }) => {
   return (
@@ -29,6 +30,7 @@ const ItemView = ({
                   key={i.name}
                   className="min-h-16 w-full p-4 grid grid-cols-4 hover:bg-gray-200 cursor-pointer"
                   onClick={e => {
+                    comingFromSearch(false);
                     changeView('add', i);
                   }}
                 >
@@ -87,7 +89,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    changeView: bindActionCreators(changeView, dispatch)
+    changeView: bindActionCreators(changeView, dispatch),
+    comingFromSearch: bindActionCreators(comingFromSearch, dispatch)
   };
 };
 
