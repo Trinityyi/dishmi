@@ -5,32 +5,16 @@ import { changeView } from '../state';
 
 const CategoryView = ({
   categories,
-  isFamily = false,
   title = '',
   changeView
 }) => {
   return (
     <>
       <div>
-        {
-          isFamily ? (
-            <div className="flex flex-col items-center mt-2 mb-4">
-              {/* TODO: Add custom HTML etc. */}
-              <h1 className="text-3xl text-center">My restaurant</h1>
-            </div>
-          ) : (
-            <>
-              <button className="mx-4 my-2" onClick={e => {
-                changeView('families');
-              }}>
-                <img src="/arrow-left.svg" alt="Back"/>
-              </button>
-              <div className="flex flex-col items-center mt-8 mb-4">
-                <h1 className="text-3xl text-center">{title}</h1>
-              </div>
-            </>
-          )
-        }
+        <div className="flex flex-col items-center mt-2 mb-4">
+          {/* TODO: Add custom HTML etc. */}
+          <h1 className="text-3xl text-center">My restaurant</h1>
+        </div>
         <div className="flex flex-col divide-y-2 divide-gray-300 divide-double">
           {
             categories.map(c => (
@@ -38,8 +22,7 @@ const CategoryView = ({
                 key={c.name}
                 className="h-16 w-full flex hover:bg-gray-200 p-4 cursor-pointer"
                 onClick={() => {
-                  if (isFamily) changeView('categories', c);
-                  else changeView('items', c);
+                  changeView('items', c);
                 }}
               >
                 <h2 className="text-2xl self-center">{c.name}</h2>
@@ -48,13 +31,9 @@ const CategoryView = ({
           }
         </div>
       </div>
-      {
-        isFamily ? (
-          <div>
-            <p className="text-gray-700 text-sm text-center mt-4 mb-2">Cool restaurant located at a place far far away</p>
-          </div>
-        ) : null
-      }
+      <div>
+        <p className="text-gray-700 text-sm text-center mt-4 mb-2">Cool restaurant located at a place far far away</p>
+      </div>
     </>
   );
 };

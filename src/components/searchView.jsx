@@ -119,13 +119,8 @@ const SearchView = ({
 
 const mapStateToProps = state => {
   return {
-    items: state.menu.families.reduce((a, f) => {
-      return [
-        ...a,
-        ...f.categories.reduce((b, c) => {
-          return [...b, ...c.items.map(i => ({ ...i, category: c.name }))];
-        }, [])
-      ];
+    items: state.menu.categories.reduce((a, c) => {
+      return [...a, ...c.items.map(i => ({ ...i, category: c.name }))];
     }, []),
     lastView: state.user.lastView,
     searchQuery: state.user.searchQuery

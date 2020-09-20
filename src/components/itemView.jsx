@@ -7,14 +7,13 @@ const ItemView = ({
   items,
   title = '',
   changeView,
-  comingFromSearch,
-  selectedFamily
+  comingFromSearch
 }) => {
   return (
     <>
       <div>
         <button className="mx-4 my-2" onClick={e => {
-          changeView('categories', selectedFamily);
+          changeView('categories');
         }}>
           <img src="/arrow-left.svg" alt="Back"/>
         </button>
@@ -83,7 +82,6 @@ const ItemView = ({
 
 const mapStateToProps = state => {
   return {
-    selectedFamily: state.user.family
   };
 };
 

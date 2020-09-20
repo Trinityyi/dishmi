@@ -8,36 +8,32 @@ import ItemView from '../components/itemView';
 import AddView from '../components/addView';
 import CartView from '../components/cartView';
 import SearchView from '../components/searchView';
-import { initializeMenu } from '../state';
+import { initializeMenu, changeView } from '../state';
 
 const RestaurantPage = ({
   data,
   initializeMenu,
+  changeView,
   menuData,
   view,
-  family,
   category
 }) => {
   useEffect(() => {
     initializeMenu(data.dataCsv.menu);
   }, [data, initializeMenu]);
 
-  if (!menuData || !menuData.families || !menuData.families.length) return null;
+  useEffect(() => {
+    if (!view) changeView('categories');
+  }, [changeView, view]);
+
+  if (!menuData || !menuData.categories || !menuData.categories.length) return null;
 
   return (
     <Layout title="">
       {
-        view === 'families' &&
-        <CategoryView
-          categories={menuData.families}
-          isFamily
-        />
-      }
-      {
         view === 'categories' &&
         <CategoryView
-          categories={family.categories}
-          title={family.name}
+          categories={menuData.categories}
         />
       }
       {
@@ -67,14 +63,14 @@ const mapStateToProps = state => {
   return {
     menuData: state.menu,
     view: state.user.view,
-    family: state.user.family,
     category: state.user.category,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    initializeMenu: bindActionCreators(initializeMenu, dispatch)
+    initializeMenu: bindActionCreators(initializeMenu, dispatch),
+    changeView: bindActionCreators(changeView, dispatch)
   };
 };
 
@@ -88,7 +84,6 @@ export const query = graphql`
         itemDescription
         itemPrice
         categoryName
-        familyName
         modelName
         imageUrl
         tagList
