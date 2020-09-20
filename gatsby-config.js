@@ -1,4 +1,4 @@
-const { typeNameFromDir } = require("gatsby-transformer-csv")
+const { typeNameFromDir } = require('gatsby-transformer-csv');
 
 module.exports = {
   siteMetadata: {
@@ -41,11 +41,11 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `standalone`,
-        icon: `static/favicon.ico`
+        icon: `static/logo.png`
       },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`
   ]
-}
+};
