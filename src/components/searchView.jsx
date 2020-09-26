@@ -49,6 +49,7 @@ const SearchView = ({
             className="shadow appearance-none border rounded w-auto mx-4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2"
             aria-label="Search"
             placeholder="Search..."
+            autoFocus
             value={searchQuery}
             onChange={e => {
               setSearchQuery(e.target.value);
