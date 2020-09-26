@@ -4,7 +4,7 @@
       src="./static/logo.png">
   </a>
   <h1>dishmi</h1>
-  <p>e-Menu application<p>
+  <p>e-Menu application (<a href="https://dishmi.netlify.app/demo/">See a preview</a>) <p>
 </div>
 
 <div align="center">
@@ -24,8 +24,8 @@
 
 
 <div align="center">
-  <img width="480" height="480" vspace="" hspace="4" src="./mocks/search.png">
-  <img width="480" height="480" vspace="" hspace="4" src="./mocks/category.png">
+  <img width="440" height="440" vspace="" hspace="4" src="./mocks/search.png">
+  <img width="440" height="440" vspace="" hspace="4" src="./mocks/category.png">
 </div>
 
 ## How to use
@@ -34,8 +34,8 @@ For information on how to add your restaurant, please open an issue in this repo
 
 
 <div align="center">
-  <img width="480" height="480" vspace="" hspace="4" src="./mocks/item.png">
-  <img width="480" height="480" vspace="" hspace="4" src="./mocks/my-order.png">
+  <img width="440" height="440" vspace="" hspace="4" src="./mocks/item.png">
+  <img width="440" height="440" vspace="" hspace="4" src="./mocks/my-order.png">
 </div>
 
 ## FAQ
