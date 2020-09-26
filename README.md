@@ -24,8 +24,8 @@
 
 
 <div align="center">
-  <img width="440" height="440" vspace="" hspace="4" src="./mocks/search.png">
-  <img width="440" height="440" vspace="" hspace="4" src="./mocks/category.png">
+  <img width="420" height="420" vspace="" hspace="4" src="./mocks/search.png">
+  <img width="420" height="420" vspace="" hspace="4" src="./mocks/category.png">
 </div>
 
 ## How to use
@@ -34,8 +34,8 @@ For information on how to add your restaurant, please open an issue in this repo
 
 
 <div align="center">
-  <img width="440" height="440" vspace="" hspace="4" src="./mocks/item.png">
-  <img width="440" height="440" vspace="" hspace="4" src="./mocks/my-order.png">
+  <img width="420" height="420" vspace="" hspace="4" src="./mocks/item.png">
+  <img width="420" height="420" vspace="" hspace="4" src="./mocks/my-order.png">
 </div>
 
 ## FAQ
