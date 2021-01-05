@@ -50,7 +50,7 @@ Currently, there is no cost associated with hosting your menu, except for a litt
 
 ## Credits
 
-Made using [Gatsby](https://www.gatsbyjs.com/) by [@Trinityyi](https://github.com/Trinityyi) and [@Chalarangelo](https://github.com/Chalarangelo).
+Made using [Gatsby](https://www.gatsbyjs.com/) and [Tailwind CSS](https://tailwindcss.com/) by [@Trinityyi](https://github.com/Trinityyi) and [@Chalarangelo](https://github.com/Chalarangelo).
 Hosted on [Netlify](https://www.netlify.com/).
 
 ## License
